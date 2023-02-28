@@ -1,0 +1,1 @@
+console.log("This javascript being loaded");

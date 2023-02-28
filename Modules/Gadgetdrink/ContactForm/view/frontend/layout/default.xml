@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" ifconfig="contact_section/contact_form_enable/enable" name="contact-form-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contact Form</argument>
+                    <argument name="path" xsi:type="string">contactform</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

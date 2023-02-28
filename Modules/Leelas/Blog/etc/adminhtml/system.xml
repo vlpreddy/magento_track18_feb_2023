@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Leelas" translate="label" sortOrder="300">
+            <label>Leelas</label>
+        </tab>
+        <section id="blog" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>General Configuration</label>
+            <tab>Leelas</tab>
+            <resource>Leelas_Blog::config_leela</resource>
+            <group id="account_share" translate="label" type="text" sortOrder="10" showInDefault="1">
+                <label>Account Sharing Options</label>
+              <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" >
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                   
+                </field> 
+            </group>
+
+            <group id="contact_form_enable" translate="label" type="text" sortOrder="10" showInDefault="1">
+                <label>Enable Module</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" >
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                   
+                </field>  
+            </group>
+</section>
+</system>
+</config>

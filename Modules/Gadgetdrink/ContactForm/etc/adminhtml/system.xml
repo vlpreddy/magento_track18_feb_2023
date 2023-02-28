@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="gadgetdrink" translate="label" sortOrder="300">
+            <label>Gadget Drink</label>
+        </tab>
+        <section id="contact_section" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>General Configuration</label>
+            <tab>gadgetdrink</tab>
+            <resource>Gadgetdrink_ContactForm::gadgetdrink_contactform</resource>
+            <group id="contact_form_enable" translate="label" type="text" sortOrder="10" showInDefault="1">
+                <label>Enable Module</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" >
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                   
+                </field>  
+            </group>
+             <group id="contact_form_configuration" translate="label" type="text" sortOrder="10" showInDefault="1">
+                <label>Manage Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" >
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model> 
+                </field>
+
+                <field id="field1" translate="label" type="text" sortOrder="1" showInDefault="1" >
+                    <label>Field Value 1</label>
+                    <validate>required-entry</validate>
+                    <comment>manage multiple values with comma seperated</comment>
+                     <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+
+                <field id="field2" translate="label" type="text" sortOrder="1" showInDefault="1" >
+                    <label>Field Value 2</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>     
+                </field>
+            </group>
+            </section>
+            </system>
+            </config>

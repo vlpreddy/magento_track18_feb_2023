@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="columns.top">
+            <referenceContainer name="category.view.container" htmlTag="div" htmlClass="category-view">
+                <referenceBlock class="Magento\Catalog\Block\Category\View" name="category.image" template="Magento_Catalog::category/image.phtml">
+                    <arguments>
+                        <argument name="image" xsi:type="object">Magento\Catalog\ViewModel\Category\Image</argument>
+                        <argument name="output" xsi:type="object">Magento\Catalog\ViewModel\Category\Output</argument>
+                    </arguments>
+                </referenceBlock>
+               </referenceContainer>
+        </referenceContainer>
+    </body>
+</page>
